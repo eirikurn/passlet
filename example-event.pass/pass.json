@@ -1,0 +1,46 @@
+{
+    "description" : "Bíómiði á Dark Knight Rises klukkan 20:00 þann 5. október í Sambíóin Egilshöll",
+    "formatVersion" : 1,
+    "passTypeIdentifier" : "pass.is.nilsson.passlet",
+    "organizationName" : "Passlet",
+    "serialNumber" : "123456",
+    "authenticationToken" : "hello",
+    "teamIdentifier" : "abcd",
+    "webServiceURL" : "https://passlet.nilsson.is",
+    "eventTicket" : {
+        "primaryFields" : [
+            {
+                "key" : "event-name",
+                "label" : "Bíómynd",
+                "value" : "Dark Knight Rises"
+            }
+        ],
+        "secondaryFields" : [
+            {
+                "key" : "event-venue",
+                "label" : "Hvar",
+                "value" : "Egilshöll"
+            },
+            {
+                "key" : "event-court",
+                "label" : "Salur",
+                "value" : 4
+            }
+        ],
+        "auxiliaryFields": [
+            {
+                "key" : "event-price",
+                "label" : "Verð",
+                "value" : 1200,
+                "currencyCode" : "ISK"
+            }
+        ],
+        "headerFields": [
+            {
+                "key": "header1",
+                "label": "8:00",
+                "value": "Oct 31"
+            }
+        ]
+    }
+}
