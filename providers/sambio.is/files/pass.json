@@ -1,0 +1,33 @@
+{
+    "eventTicket" : {
+        "primaryFields" : [
+            {
+                "key" : "movieName",
+                "label" : "Bíómynd"
+            }
+        ],
+        "secondaryFields" : [
+            {
+                "key" : "where",
+                "label" : "Hvar"
+            },
+            {
+                "key" : "court",
+                "label" : "Salur"
+            }
+        ],
+        "auxiliaryFields": [
+            {
+                "key" : "price",
+                "label" : "Verð",
+                "currencyCode" : "ISK"
+            }
+        ],
+        "headerFields": [
+            {
+                "key": "when",
+                "label": "8:00"
+            }
+        ]
+    }
+}

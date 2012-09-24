@@ -28,7 +28,7 @@ app.configure('development', function(){
   app.use(express.errorHandler());
 });
 
-app.get('/v1/passes/:passTypeIdentifier/:serialNumber', passes.getLatestVersion);
+app.get('/passbook/v1/passes/:passTypeIdentifier/:serialNumber', passes.getLatestVersion);
 app.get('/users', user.list);
 
 http.createServer(app).listen(app.get('port'), function(){
