@@ -47,12 +47,28 @@ var signPass = function(filename, files, callback) {
 var buildPass = function(provider, pass, passInfo) {
   var files = pass.files = pass.files || {}
     , fields = pass.fields || {}
-    , subFields;
+    , subFields
+    , passData;
 
   for (f in provider.files) {
     if (!(f in files)) {
       files[f] = provider.files[f];
     }
+  }
+
+  function updateField(f) {
+    var value, k;
+    if (f.key in fields) {
+      value = fields[f.key]
+      if (typeof value === 'object') {
+        for (k in value) {
+          f[k] = value[k];
+        }
+      } else {
+        f.value = value;
+      }
+    }
+    return f.value != null ? f : null;
   }
 
   passData = JSON.parse(files["pass.json"]);
@@ -61,8 +77,8 @@ var buildPass = function(provider, pass, passInfo) {
       for (j in passData[k]) {
         if (~FIELD_TYPES.indexOf(j)) {
           subFields = passData[k][j];
-          subFields = subFields.map(function(f) { if (f.key in fields) { f.value = fields[f.key]; } return f; });
-          subFields = subFields.filter(function(f) { return f.value != null; });
+          subFields = subFields.map(updateField);
+          subFields = subFields.filter(function(f) { return f !== null; });
           passData[k][j] = subFields;
         }
       }
@@ -97,7 +113,7 @@ exports.createPass = function(providerName, data, cb) {
 
   provider.createPass(data, function(err, pass) {
     pass = buildPass(provider, pass, passInfo);
-    signPass(serial + ".zip", pass.files, function() {
+    signPass(serial + ".pkpass", pass.files, function() {
       model.Pass({serial: serial, authToken: authToken}).save(function(err, pass) {
         cb(err, pass);
       });

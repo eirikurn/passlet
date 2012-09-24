@@ -6,7 +6,10 @@ exports.createPass = function(data, cb) {
       where: "Sambíóin Egilshöll",
       court: 1,
       price: 500,
-      when: "8:00"
+      when: {
+        value: "8:00",
+        label: "Oct 31"
+      }
     }
   });
 };
