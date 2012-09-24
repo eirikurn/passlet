@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 
-var pass = require('../pass');
+var pass = require('../lib/pass');
 
 pass.createPass('sambio.is', {}, function(err, pass) {
   if (err) {
