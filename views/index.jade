@@ -7,15 +7,22 @@ block content
       Now you can create a pass for Apple's Passbook app on websites
       that haven't bothered to support it yet.
     p.
-      Just click the bookmarklet when you have finished buying a
-      ticket on one of our supported websites* and we'll email a
-      pass to your phone or let you download it right there.
-    form(action='/bookmarklet', method='post')
+      Just click on the bookmarklet after buying a
+      ticket on one of our supported websites*. We'll email a
+      pass to your phone or let you download it right away.
+    if errors
+      .alert
+        button.close(type='button', data-dismiss='alert') x
+        each e in errors
+          = e.msg
+          br
+    form(action='/passlet', method='post')
       input.input-xlarge.input-big.input-align-button(type='email', name='email', placeholder='Email address to get passes')
       | 
       button.btn.btn-primary.btn-large Create bookmarklet!
 
-  small * Currently only works on 
+  small * Currently only works on a few Icelandic sites like 
     - var providerLinks = providerNames.map(function(n) { return "<a href='http://" + n + "'>" + n + "</a>"});
     != list(providerLinks)
-    | .
+    | . However, it's simple to develop a provider to support more sites. 
+    a(href="https://github.com/eirikurn/passlet/") See more.
