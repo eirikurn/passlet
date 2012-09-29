@@ -1,0 +1,8 @@
+#!/bin/bash
+
+# Go to project root dir
+cd `dirname $0`
+cd ..
+
+# Start server.
+node_modules/.bin/supervisor -w lib lib/app.js
