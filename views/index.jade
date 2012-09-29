@@ -1,5 +1,21 @@
 extends layout
 
 block content
-  h1= title
-  p Welcome to #{title}
+  .hero-unit
+    h1 Passbook bookmarklet
+    p.
+      Now you can create a pass for Apple's Passbook app on websites
+      that haven't bothered to support it yet.
+    p.
+      Just click the bookmarklet when you have finished buying a
+      ticket on one of our supported websites* and we'll email a
+      pass to your phone or let you download it right there.
+    form(action='/bookmarklet', method='post')
+      input.input-xlarge.input-big.input-align-button(type='email', name='email', placeholder='Email address to get passes')
+      | 
+      button.btn.btn-primary.btn-large Create bookmarklet!
+
+  small * Currently only works on 
+    - var providerLinks = providerNames.map(function(n) { return "<a href='http://" + n + "'>" + n + "</a>"});
+    != list(providerLinks)
+    | .

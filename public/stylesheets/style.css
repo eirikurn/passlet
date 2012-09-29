@@ -2,6 +2,17 @@ body {
   padding: 50px;
 }
 
-a {
-  color: #00B7FF;
+.input-big, .input-big[type='text'],
+.input-big[type="email"] {
+  padding: 9px 14px;
+  font-size: 16px;
+  line-height: normal;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+}
+
+.input-align-button, .input-big[type='text'],
+.input-big[type='email'] {
+  margin-bottom: 0;
 }
