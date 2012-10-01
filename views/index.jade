@@ -16,7 +16,7 @@ block content
         each e in errors
           = e.msg
           br
-    form(action='/passlet', method='post')
+    form(action='/signup', method='post')
       input.input-xlarge.input-big.input-align-button(type='email', name='email', placeholder='Email address to get passes')
       | 
       button.btn.btn-primary.btn-large Create bookmarklet!

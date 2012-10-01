@@ -1,0 +1,9 @@
+extends layout
+
+block content
+  .hero-unit
+    h1 Welcome #{session.email}
+    p Here is your bookmarklet. Drag it to your bookmarks bar.
+    a.btn.btn-primary(href=bookmarklet) Passlet
+
+
