@@ -6,7 +6,7 @@
   try {
     if (!body)
       throw(0);
-    scriptElement.setAttribute('src', '<%= baseUrl %>/bm/<%= bookmarkletId %>?d=' + encodeURIComponent(location.host));
+    scriptElement.setAttribute('src', '<%- baseUrl %>/bm/<%- bookmarkletId %>?d=' + encodeURIComponent(location.host));
     body.appendChild(scriptElement);
   } catch (e) {
     alert('Please wait until the page has loaded.');
