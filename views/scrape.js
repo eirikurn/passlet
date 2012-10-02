@@ -42,7 +42,7 @@
 <% } else if (!provider) { %>
   alert('Sorry, this website is not supported.');
 <% } else { %>
-  passUrl = "<%- env.PASSLET_BASE_URL %>/pass/<%- provider.name %>";
+  passUrl = "<%- env.PASSLET_BASE_URL %>/pass/<%- user.bookmarklet %>";
 
 <%- indent(provider.scraper, 2) %>
 <% } %>
