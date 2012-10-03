@@ -1,0 +1,16 @@
+!!!
+html(lang='en')
+  head
+    meta(charset='utf-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+
+    title Login link for #{domain}
+
+  body
+    p We received a request for #{email} to log in to #{domain}.
+
+    p To log in, click here: 
+      loginUrl = env.PASSLET_BASE_URL + '/login?token=' + token
+      a(href=loginUrl)= loginUrl
+
+    p If not, please ignore this email.
