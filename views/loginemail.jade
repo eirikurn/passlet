@@ -10,7 +10,6 @@ html(lang='en')
     p We received a request for #{email} to log in to #{domain}.
 
     p To log in, click here: 
-      loginUrl = env.PASSLET_BASE_URL + '/login?token=' + token
       a(href=loginUrl)= loginUrl
 
     p If not, please ignore this email.
