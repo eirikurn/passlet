@@ -1,0 +1,68 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+#pscrape div, #pscrape span, #pscrape applet, #pscrape object, #pscrape iframe,
+#pscrape h1, #pscrape h2, #pscrape h3, #pscrape h4, #pscrape h5, #pscrape h6, #pscrape p, #pscrape blockquote, #pscrape pre,
+#pscrape a, #pscrape abbr, #pscrape acronym, #pscrape address, #pscrape big, #pscrape cite, #pscrape code,
+#pscrape del, #pscrape dfn, #pscrape em, #pscrape img, #pscrape ins, #pscrape kbd, #pscrape q, #pscrape s, #pscrape samp,
+#pscrape small, #pscrape strike, #pscrape strong, #pscrape sub, #pscrape sup, #pscrape tt, #pscrape var,
+#pscrape b, #pscrape u, #pscrape i, #pscrape center,
+#pscrape dl, #pscrape dt, #pscrape dd, #pscrape ol, #pscrape ul, #pscrape li,
+#pscrape fieldset, #pscrape form, #pscrape label, #pscrape legend,
+#pscrape table, #pscrape caption, #pscrape tbody, #pscrape tfoot, #pscrape thead, #pscrape tr, #pscrape th, #pscrape td,
+#pscrape article, #pscrape aside, #pscrape canvas, #pscrape details, #pscrape embed, 
+#pscrape figure, #pscrape figcaption, #pscrape footer, #pscrape header, #pscrape hgroup, 
+#pscrape menu, #pscrape nav, #pscrape output, #pscrape ruby, #pscrape section, #pscrape summary,
+#pscrape time, #pscrape mark, #pscrape audio, #pscrape video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+#pscrape article, #pscrape aside, #pscrape details, #pscrape figcaption, #pscrape figure, 
+#pscrape footer, #pscrape header, #pscrape hgroup, #pscrape menu, #pscrape nav, #pscrape section {
+  display: block;
+}
+#pscrape ol, #pscrape ul {
+  list-style: none;
+}
+#pscrape blockquote, #pscrape q {
+  quotes: none;
+}
+#pscrape blockquote:before, #pscrape blockquote:after,
+#pscrape q:before, #pscrape q:after {
+  content: '';
+  content: none;
+}
+#pscrape table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/*
+ * Reset some otherwise inherited properties.
+ * Provide visual look for sidebar.
+ */
+#pscrape {
+    font-family: sans-serif;
+    font-size: 13px;
+    line-height: 1;
+    text-align: left;
+
+    box-sizing: border-box;
+    padding: 30px;
+
+    background: url("<%- env.PASSLET_BASE_URL %>/images/bm/background.jpg") repeat-y;
+    color: #fff;
+    box-shadow: 0 0 30px #000 inset;
+}
+
+#pscrape h1 {
+  font-size: 2em;
+  margin-bottom: 0.5em;
+}

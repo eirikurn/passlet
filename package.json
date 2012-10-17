@@ -6,6 +6,7 @@
   },
   "dependencies": {
     "async": "~=0.1.22",
+    "clean-css": "~=0.7.0",
     "ejs": "~=0.8.3",
     "express": "3.0.0rc4",
     "express-validator": "~=0.2.4",

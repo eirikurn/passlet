@@ -5,4 +5,4 @@ cd `dirname $0`
 cd ..
 
 # Start server.
-node_modules/.bin/supervisor -w lib lib/app.js
+node_modules/.bin/supervisor -e 'node|js|css' -w 'lib,views' lib/app.js

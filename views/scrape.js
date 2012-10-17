@@ -78,13 +78,24 @@
     base.commit();
   };
 
+  // Add our styles
+  var createStylesheet = function(css) {
+    var head = document.getElementsByTagName('head')[0]
+      , style = document.createElement('style');
+
+    style.type = 'text/css';
+    if(style.styleSheet){
+        style.styleSheet.cssText = css;
+    }else{
+        style.appendChild(document.createTextNode(css));
+    }
+    head.appendChild(style);
+  };
+  createStylesheet("<%- escapejs(scrapecss) %>");
+
+  // Create our sidebard div
   var div = document.createElement('div');
-  div.style.background = 'url("http://localhost:3000/images/bm/background.jpg") repeat-y';
-  div.style.color = '#fff';
-  div.style.boxShadow = '0 0 30px #000 inset';
-  div.style.boxSizing = 'border-box';
-  div.style.padding = '30px';
-  div.style.textAlign = 'left';
+  div.id = 'pscrape';
   div.innerHTML = "<h1>Passlet</h1><p>Parsing ticket information</p>";
 
   slidePage(div, 'left', 300);
