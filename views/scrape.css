@@ -57,7 +57,7 @@
     box-sizing: border-box;
     padding: 30px;
 
-    background: url("<%- env.PASSLET_BASE_URL %>/images/bm/background.jpg") repeat-y;
+    background: url("<%- env.PASSLET_BASE_URL %>/images/bm/background.jpg") repeat;
     color: #fff;
     box-shadow: 0 0 30px #000 inset;
 }
