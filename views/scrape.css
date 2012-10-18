@@ -16,6 +16,7 @@
 #pscrape figure, #pscrape figcaption, #pscrape footer, #pscrape header, #pscrape hgroup, 
 #pscrape menu, #pscrape nav, #pscrape output, #pscrape ruby, #pscrape section, #pscrape summary,
 #pscrape time, #pscrape mark, #pscrape audio, #pscrape video {
+  color: inherit;
   margin: 0;
   padding: 0;
   border: 0;
